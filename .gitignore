@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# IDEs and editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Datasets (exclude large CSV files)
+*.csv
+Insurance Fraud - TRAIN-3000.csv
+Insurance Fraud - TEST-12900.csv
+
+# Temporary files
+*.log
+*.tmp
+*.bak
+
+# Output files
+*.pdf
+*.png
+*.jpg
+*.jpeg
