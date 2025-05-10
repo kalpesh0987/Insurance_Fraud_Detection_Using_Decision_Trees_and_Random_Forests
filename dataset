@@ -1,0 +1,52 @@
+# Insurance Fraud Detection Dataset Description
+
+This document describes the dataset used in the Insurance Fraud Detection project, sourced from Kaggle.
+
+## Dataset Overview
+The project uses two CSV files for training and testing machine learning models to detect insurance fraud:
+
+- **Training Dataset**: `Insurance Fraud - TRAIN-3000.csv`
+  - Size: 3,000 records
+  - Purpose: Used to train Decision Tree and Random Forest classifiers.
+- **Test Dataset**: `Insurance Fraud - TEST-12900.csv`
+  - Size: 12,918 records
+  - Purpose: Used to evaluate the performance of trained models.
+
+## Source
+- **Dataset Name**: "Insurance Fraud Claims"
+
+## Features
+The datasets contain a mix of numerical and categorical features related to insurance claims, with a target variable indicating whether a claim is fraudulent.
+
+### Target Variable
+- **FRAUDFOUND**: Binary variable
+  - `1`: Fraudulent claim
+  - `0`: Non-fraudulent claim
+
+### Feature Types
+- **Numerical Features**: Continuous or discrete values (e.g., claim amount, age)
+  - Preprocessing: Mean imputation for missing values, standard scaling using `StandardScaler`.
+- **Categorical Features**: Discrete categories (e.g., policy type, claim type)
+  - Preprocessing: Mode imputation for missing values, one-hot encoding using `OneHotEncoder` with `handle_unknown='ignore'`.
+
+### Total Features
+- 32 columns (31 features + 1 target variable, `FRAUDFOUND`)
+- Feature names are not listed here due to their number, but they include attributes related to:
+  - Policyholder demographics
+  - Claim details
+  - Policy information
+  - Incident circumstances
+
+
+## Access Instructions
+
+1. Download `Insurance Fraud - TRAIN-3000.csv` and `Insurance Fraud - TEST-12900.csv`.
+2. Place the files in the project’s root directory or a `data/` subdirectory.
+3. Ensure the file names match exactly as listed above to avoid errors when running the notebook.
+
+## Notes
+- **Data Quality**: The dataset may contain biases or class imbalances (e.g., fewer fraudulent claims), which could affect model performance. Users should explore the data to understand its characteristics.
+- **Usage Restrictions**: Adhere to the dataset’s license terms specified on Kaggle. For questions about permissible use, refer to the Kaggle dataset page or contact the dataset owner.
+- **Exclusion from Repository**: The datasets are excluded from this repository (see `.gitignore`) to comply with Kaggle’s terms and reduce repository size.
+
+For additional details about the project, see [README.md](../README.md). For questions about the dataset, open an issue on the GitHub repository or contact the project maintainer, Kalpesh Patil.
